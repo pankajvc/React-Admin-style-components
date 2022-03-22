@@ -7,7 +7,7 @@ const IconButton = styled.button`
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    background-color: transparent;
+    /* background-color: transparent; */
     outline: 0px;
     border: 0px;
     margin: 0px;
@@ -26,15 +26,20 @@ const IconButton = styled.button`
     transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     width: 40px;
     height: 40px;
+    background-color: rgba(99, 115, 129, 0.08);
     :hover {
-        background-color: rgba(99, 115, 129, 0.08);
+    background: rgba(145, 158, 171, 0.08) radial-gradient(circle, transparent 1%, rgba(145, 158, 171, 0.08) 1%) center/15000%;
     };
-    ${props => props.sidebarIcon ? "transform: rotate(180deg)" : ""};
+    :active {
+    background-color: rgba(145, 158, 171, 0.08);
+    background-size: 100%;
+    transition: background 0s;
+    };
 `
 
-export default function IconNormalButton({ children, onClick, sidebarIcon }) {
+export default function IconNormalButton({ children, onClick, sidebarIcon, isSidebar }) {
     return (
-        <IconButton onClick={onClick} sidebarIcon={sidebarIcon} >
+        <IconButton onClick={onClick} sidebarIcon={sidebarIcon} isSidebar={isSidebar} >
             {children}
         </IconButton>
     )

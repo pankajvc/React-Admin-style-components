@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import Grid from './components/Grid/Grid';
 import { GlobalStyles } from './globalStyles';
 import Layout from './layout'
 
@@ -16,7 +17,20 @@ export default function App() {
         <ThemeProvider theme={{ mode: theme }}>
             <GlobalStyles />
             <Layout theme={theme} toggleTheme={toggleTheme}>
-                <h1>Hello, world!</h1>
+                <Grid container spacing={2}>
+                    <Grid item lg={4} md={3} sm={6} xs={12}>
+                    <h1>Hello</h1>
+                    </Grid>
+                    <Grid item lg={4} md={3} sm={6} xs={12}>
+                        <h1>Hello</h1>
+                    </Grid>
+                    <Grid item lg={4} md={3} sm={6} xs={12}>
+                        <h1>Hello</h1>
+                    </Grid>
+                    <Grid item lg={4} md={3} sm={6} xs={12}>
+                        <h1>Hello</h1>
+                    </Grid>
+                </Grid>
             </Layout>
         </ThemeProvider>
     )

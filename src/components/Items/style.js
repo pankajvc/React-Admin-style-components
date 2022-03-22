@@ -13,4 +13,5 @@ export const Item = styled.li`
     padding-bottom: 8px;
     color: rgb(33, 43, 54);
     transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    opacity: ${props => props.isSidebar ? '0' : '1'};
 `

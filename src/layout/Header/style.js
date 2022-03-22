@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import theme from "styled-theming"
+import { device } from "./../../config/Theme/BreakPoints";
+
 const BackgroundColor = theme('mode', {
   light: 'rgba(255, 255, 255,0.8)',
   dark: 'rgba(22, 28, 36)'
@@ -23,7 +25,7 @@ export const HeaderMain = styled.header`
   transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms ,0.5s linear;
   @media (min-width: 1200px) {
     height: 92px;
-    width: calc(100% - 281px);
+    /* width: calc(100% - 281px); */
   }
 `
 export const HeaderInner = styled.div`
